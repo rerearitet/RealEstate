@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS estate (
                   );
 
 INSERT INTO estate (id, name) VALUES
-(1, 'Primorsky'),
-(2, 'Suvorovsky'),
-(3, 'Malinovsky');
+(1, 'Estate1'),
+(2, 'Estate2'),
+(3, 'Estate3');
