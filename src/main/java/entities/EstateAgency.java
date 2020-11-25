@@ -1,64 +1,44 @@
 package entities;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "estateAgency")
-public class EstateAgency { //агенство по недвижимости
+@NoArgsConstructor
+@EqualsAndHashCode
+public class EstateAgency { //Агенство недвижимости
+    @Id
+    @Getter
+    @Setter
+    @Column(name = "id")
     private int id;
+
+    @Basic
+    @Getter
+    @Setter
+    @Column(name = "name")
     private String name;
 
-    private String region;
-    private String country;
-    private String city;
-
-    @Id
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Basic
-    @Column(name = "name")
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Basic
+    @Getter
+    @Setter
     @Column(name = "region")
-    public String getRegion() {
-        return region;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
+    private String region;
 
     @Basic
+    @Getter
+    @Setter
     @Column(name = "county")
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
+    private String country;
 
     @Basic
+    @Getter
+    @Setter
     @Column(name = "city")
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
+    private String city;
 }

@@ -1,30 +1,26 @@
 package entities;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "city")
+@NoArgsConstructor
+@EqualsAndHashCode
 public class City { //Город
-    private int id;
-    private String name;
-
     @Id
+    @Getter
+    @Setter
     @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private int id;
 
     @Basic
+    @Getter
+    @Setter
     @Column(name = "name")
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String name;
 }
